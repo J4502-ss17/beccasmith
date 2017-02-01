@@ -36,6 +36,7 @@ body {
   #nav a:link, #nav a:visited {
     display: block;
     color: #ffffff;
+    font-size: 0.8em;
     background-color: #778899;
     font-weight: bold;
     text-align: center;
