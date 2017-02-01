@@ -1,12 +1,12 @@
 
 p {
-color: #ffffff;
+color: #c0c0c0;
 font-family: Helvetica, Arial, sans-serif;
 text-align: center;
 }
 
 h1 {
-  color: #808080;
+  color: #c0c0c0;
   font-family: Georgia, "Times New Roman", serif;
   text-align: center;
   font-weight: lighter;
@@ -37,7 +37,7 @@ body {
     display: block;
     color: #ffffff;
     font-size: 0.8em;
-    background-color: #778899;
+    background-color: #c0c0c0;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
@@ -46,12 +46,11 @@ body {
   }
 
   #nav a:hover, #nav a:active {
-    background-color: #c0c0c0;
+    background-color: #778899;
   }
 
   img.center {
     display: block;
-    border: none;
     margin-left: auto;
     margin-right: auto;
   }
