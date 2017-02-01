@@ -9,7 +9,7 @@ h1 {
 }
 
 body {
-  background-color: #ebe3c3;
+  background-color: #b0crde;
   }
 
   #nav {
@@ -36,4 +36,8 @@ body {
 
   #nav a:hover, #nav a:active {
     background-color: #7a991a;
+  }
+
+  img {
+    border: none;
   }
