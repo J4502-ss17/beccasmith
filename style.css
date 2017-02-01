@@ -48,7 +48,7 @@ body {
     background-color: #c0c0c0;
   }
 
-  img {
-    align-items: center;
+  img.center {
+    display: block;
     border: none;
   }
