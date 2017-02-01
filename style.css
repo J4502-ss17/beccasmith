@@ -51,4 +51,6 @@ body {
   img.center {
     display: block;
     border: none;
+    margin-left: auto;
+    margin-right: auto;
   }
