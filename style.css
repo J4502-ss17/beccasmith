@@ -8,6 +8,8 @@ text-align: center;
 h1 {
   font-family: Georgia, "Times New Roman", serif;
   text-align: center;
+  font-weight: lighter;
+  font-style: italic;
 }
 
 body {
