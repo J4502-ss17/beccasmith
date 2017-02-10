@@ -1,13 +1,15 @@
 p {
 color: #778899;
-font-family: 'Rokkitt', Georgia, "Times New Roman", serif;
+font-family: 'Asar', Georgia, "Times New Roman", serif;
+line-height: 1rem;
 }
 
 h1 {
   color: #778899;
-    font-family: 'Work Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Gidugu', Helvetica, Arial, sans-serif;
   font-weight: lighter;
-  font-style: italic;
+  line-height: 3rem;
+  font-size: 4rem;
 }
 
 body {
@@ -33,13 +35,14 @@ body {
   #nav a:link, #nav a:visited {
     display: block;
     color: #ffffff;
+    font-family: 'Arya', Helvetica, Arial, sans-serif;
     font-size: 0.8em;
     background-color: #778899;
-    font-weight: lighter;;
-    text-align: center;
+    font-weight: lighter;
     font-style: italic;
+    text-align: center;
+    text-decoration: none;
     padding: 4px;
-    font-family: Helvetica, Arial, sans-serif;
   }
 
   #nav a:hover, #nav a:active {
