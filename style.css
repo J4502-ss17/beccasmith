@@ -1,54 +1,165 @@
-p {
-color: #778899;
-font-family: 'Libre Franklin', Helvetica, Arial, sans-serif;
-line-height: 1.5rem;
+/*Typography*/
+
+body {
+    font-family: 'Libre Franklin', Helvetica, Arial, serif;
+    background-color: #f0f8ff;
 }
 
 h1 {
-  color: #778899;
   font-family: 'Taviraj', Georgia, "Times New Roman", serif;
-  font-weight: lighter;
-  line-height: 3rem;
-  font-size: 4rem;
+    font-size: 2.5em;
 }
 
-body {
-  background-color: #f0f8ff;
-  }
+p {
+  font-family: 'Libre Franklin', Helvetica, Arial, sans-serif;
+    font-size: 1em;
+}
 
-  #container {
-    width: 90%;
-    margin: 1px auto 1px auto;
-  }
+/*Navigation styles*/
 
-  #nav {
+.navigation{
+	list-style: none;
+	margin: 0;
+	background: gray;
     padding: 0;
-    list-style-type: none;
-  }
+    display: flex;
+	flex-flow: column;
+}
 
-  #nav li {
-  margin: 0;
-  padding: 0;
-  border-bottom: 1px solid #b0c4de;
-  }
+.navigation a {
+	text-decoration: none;
+	display: block;
+	color: white;
+    text-align:center;
+    padding: 10px;
+    border-bottom:1px solid #f0f8ff;
+}
 
-  #nav a:link, #nav a:visited {
-    display: block;
-    color: #ffffff;
-    font-family: 'Arya', Helvetica, Arial, sans-serif;
-    font-size: 0.8em;
-    background-color: #778899;
-    font-weight: lighter;
-    font-style: italic;
-    text-align: center;
-    text-decoration: none;
-    padding: 4px;
-  }
+.navigation li:last-of-type a{
+  border-bottom: none;
+}
 
-  #nav a:hover, #nav a:active {
-    background-color: #c0c0c0;
-  }
+/*Image width*/
 
-  img {
-    border: none;
-  }
+img {
+    width: 100%;
+}
+
+/*Colors for different parts of page */
+
+header {
+  background: #f0f8ff;
+}
+
+footer {
+  background: gray;
+}
+
+article {
+  background: #f0f8ff;
+}
+
+.aside-1 {
+  background: #f0f8ff;
+}
+
+.aside-2 {
+  background: #f0f8ff;
+}
+
+/*Setting up flexible boxes for our content*/
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+header, article, aside, footer {
+  flex: 1 100%;
+  padding: 10px;
+}
+
+/*These styles activate when the page is larger than 800px wide*/
+
+@media (min-width:750px) {
+
+    .navigation {
+        flex-flow: row wrap;
+        justify-content: flex-end;
+    }
+
+    .navigation a {
+        border: none;
+    }
+
+    .navigation a:hover {
+    	background: black;
+    }
+
+    aside {
+        flex: 1 auto;
+    }
+
+    article {
+		flex: 3 0px;
+	}
+
+    .aside-1 {
+        order: 1;
+    }
+
+    article {
+        order: 2;
+    }
+
+    .aside-2 {
+        order: 3;
+    }
+
+    footer {
+        order: 4;
+    }
+
+    /*These styles apply to the floated image technique*/
+
+            /*========================
+
+            img {
+                width: 45%;
+                float: left;
+                margin-right: 10px;
+            }
+
+            .first {
+                margin-top: 0;
+            }
+
+            =======================*/
+
+    /*These styles apply to the Flexbox image technique */
+
+    article {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+    }
+
+    /*This code is for the first image attempt -- the object-fit property*/
+    /*img {
+        width: 45%;
+        object-fit: contain;
+    }*/
+
+    .image {
+        width: 45%;
+        margin-right: 10px;
+    }
+
+    .story {
+        width: 45%;
+    }
+
+    .first {
+        margin-top: 0;
+    }
+}
