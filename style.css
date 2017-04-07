@@ -15,151 +15,191 @@ p {
     font-size: 1em;
 }
 
-/*Navigation styles*/
-
-.navigation{
-	list-style: none;
-	margin: 0;
-	background: gray;
-    padding: 0;
-    display: flex;
-	flex-flow: column;
+html {
+  color: black;
+  font-size: 1em;
+  line-height: 1.4;
+  box-sizing: border-box;
 }
 
-.navigation a {
-	text-decoration: none;
-	display: block;
-	color: white;
-    text-align:center;
-    padding: 10px;
-    border-bottom:1px solid #f0f8ff;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-.navigation li:last-of-type a{
-  border-bottom: none;
+body {
+  font-size: 16px;
+  line-height: 30px;
 }
 
-/*Image width*/
-
-img {
-    width: 100%;
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
 }
 
-/*Colors for different parts of page */
-
-header {
-  background: #f0f8ff;
+.header-container {
+    border-bottom: 5px solid gray;
 }
 
-footer {
+.footer-container,
+.main aside {
+    border-top: 5px solid gray;
+}
+
+.header-container,
+.footer-container,
+.main aside {
+    background: gray;
+}
+
+.title {
+    color: white;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav a {
+  display: block;
+  margin-bottom: 5px;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
   background: gray;
 }
 
-article {
-  background: #f0f8ff;
+nav a:hover,
+nav a:visited {
+  color: white;
 }
 
-.aside-1 {
-  background: #f0f8ff;
+nav a:hover {
+  text-decoration: underline;
 }
 
-.aside-2 {
-  background: #f0f8ff;
+.main {
+  padding: 20px 0;
 }
 
-/*Setting up flexible boxes for our content*/
-
-.wrapper {
-    display: flex;
-    flex-flow: row wrap;
+.main article h1 {
+  font-size: 2em;
 }
 
-header, article, aside, footer {
-  flex: 1 100%;
-  padding: 10px;
+.main aside {
+  color: white;
+  padding: 0px 5% 10px;
 }
 
-/*These styles activate when the page is larger than 800px wide*/
+.footer-container footer {
+  color: white;
+  padding: 1px 0;
+}
 
-@media (min-width:750px) {
+@media screen and (min-width: 480px) {
 
-    .navigation {
-        flex-flow: row wrap;
-        justify-content: flex-end;
-    }
+img {
+  display: none;
+}
 
-    .navigation a {
-        border: none;
-    }
+  nav a {
+    float: left;
+    width: 30%;
+    margin: 0 0 0 5%;
+    padding: 25px 1%;
+    margin-bottom: 0;
+}
 
-    .navigation a:hover {
-    	background: black;
-    }
+  nav li:first-child a {
+    margin-left: 0;
+  }
 
-    aside {
-        flex: 1 auto;
-    }
+  nav li:last-child a {
+    margin-right: 0;
+  }
 
-    article {
-		flex: 3 0px;
-	}
 
-    .aside-1 {
-        order: 1;
-    }
+}
 
-    article {
-        order: 2;
-    }
+@media screen and (min-width: 700px){
 
-    .aside-2 {
-        order: 3;
-    }
+  article {
+       display: flex;
+       flex-flow: row;
+       flex-wrap: wrap;
+   }
+   
+  img {
+    display: block;
+    width: 65%;
+  }
 
-    footer {
-        order: 4;
-    }
+  .title {
+    float: left;
+    font-size: 1.4em;
+  }
 
-    /*These styles apply to the floated image technique*/
+  nav {
+    float: right;
+    width: 60%;
+  }
 
-            /*========================
+  nav a {
+    padding: 15px 1%;
+  }
 
-            img {
-                width: 45%;
-                float: left;
-                margin-right: 10px;
-            }
+  .main article {
+    float: left;
+    width: 57%;
+  }
 
-            .first {
-                margin-top: 0;
-            }
+  .main aside {
+    float: right;
+    width: 38%;
+  }
 
-            =======================*/
+}
 
-    /*These styles apply to the Flexbox image technique */
+@media screen and (min-width: 1100px) {
+  article {
+         display: flex;
+         flex-flow: row;
+         flex-wrap: wrap;
+     }
 
-    article {
-        display: flex;
-        flex-flow: row;
-        flex-wrap: wrap;
-    }
+img {
+  display: block;
+  width: 100%;
+}
+  .wrapper {
+    width: 1026px;
+    margin: 0 auto;
+  }
 
-    /*This code is for the first image attempt -- the object-fit property*/
-    /*img {
-        width: 45%;
-        object-fit: contain;
-    }*/
+  .title {
+    font-size: 2em;
+  }
 
-    .image {
-        width: 45%;
-        margin-right: 10px;
-    }
+  nav a {
+    padding: 25px 1%;
+  }
 
-    .story {
-        width: 45%;
-    }
+}
 
-    .first {
-        margin-top: 0;
-    }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
 }
