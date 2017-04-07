@@ -131,7 +131,7 @@ img {
        flex-flow: row;
        flex-wrap: wrap;
    }
-   
+
   img {
     display: block;
     width: 65%;
@@ -200,6 +200,6 @@ img {
   clear: both;
 }
 
-.clearfix {
-  *zoom: 1;
-}
+/*.clearfix {
+  zoom: 1;
+}*/
