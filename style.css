@@ -77,6 +77,10 @@ nav a:visited {
   color: white;
 }
 
+img {
+  display: none;
+}
+
 nav a:hover {
   text-decoration: underline;
 }
@@ -99,6 +103,24 @@ nav a:hover {
   padding: 1px 0;
 }
 
+.menu-trigger {
+    order: 2;
+    font-size: 1.75em;
+    width: 2em;
+}
+
+header h1 {
+    order: 1;
+    font-size: 2em;
+}
+
+nav ul {
+    display: none;
+        flex-flow: column;
+    }
+}
+
+
 @media screen and (min-width: 480px) {
 
 img {
@@ -120,6 +142,19 @@ img {
   nav li:last-child a {
     margin-right: 0;
   }
+  .menu-trigger {
+      order: 1;
+      font-size: 1.75em;
+      width: 2em;
+      flex-flow: column;
+  }
+
+  header h1 {
+      order: 2;
+      font-size: 2em;
+  }
+
+
 
 
 }
@@ -142,13 +177,23 @@ img {
     font-size: 1.4em;
   }
 
+  nav ul {
+      display: flex;
+      flex-flow: row;
+      font-size: .8em;
+  }
+
+  nav ul li {
+      border-top: none;
+  }
+
   nav {
     float: right;
     width: 60%;
   }
 
   nav a {
-    padding: 15px 1%;
+    padding: 20px 30px;
   }
 
   .main article {
@@ -160,10 +205,23 @@ img {
     float: right;
     width: 38%;
   }
+  .menu-trigger {
+      display: none;
+      order: 1;
+      font-size: 1.75em;
+      width: 2em;
+      flex-flow: column;
+  }
+
 
 }
 
 @media screen and (min-width: 1100px) {
+
+  .menu-trigger {
+      display: none;
+  }
+
   article {
          display: flex;
          flex-flow: row;
@@ -184,7 +242,16 @@ img {
   }
 
   nav a {
-    padding: 25px 1%;
+    padding: 20px 30px;
+  }
+
+  nav ul {
+      display: flex;
+      flex-flow: row;
+  }
+
+  nav ul li {
+      border-top: none;
   }
 
 }
